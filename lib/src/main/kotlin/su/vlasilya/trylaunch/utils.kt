@@ -4,7 +4,8 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 
 /**
- * Утилитный класс для инкапсуляци информации, необходимой для запуска корутины
+ * Утилитный класс для инкапсуляци информации,
+ * необходимой для запуска корутины
  */
 class LaunchBlock internal constructor(
     val coroutineScope: CoroutineScope,
@@ -13,7 +14,8 @@ class LaunchBlock internal constructor(
 )
 
 /**
- * Утилитный класс для инкапсуляци информации, необходимой для обработки ошибок корутины
+ * Утилитный класс для инкапсуляци информации,
+ * необходимой для обработки ошибок корутины
  */
 class ErrorBlock internal constructor(
     val dispatcher: CoroutineDispatcher,

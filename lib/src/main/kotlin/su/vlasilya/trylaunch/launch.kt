@@ -5,7 +5,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 
 /**
- * Безопасно запустить корутину на выбранном диспатчере
+ * Функция позволяющая безопасно запустить корутину на выбранном диспатчере
  *
  * ```
  * launchSafe(Dispatchers.Main) {

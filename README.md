@@ -1,6 +1,12 @@
 # TryLaunch
 
-Набор утилитных методов для более удобной обработки ошибок при запуске корутин
+Набор утилитных методов (DSL) для более удобной обработки ошибок при запуске корутин
+
+Для каждой запущенной корутины создается свой CoroutineExceptionHandler и обработчик ошибок
+
+Без указания обработчика ошибок корутина не запустится, что позволяет безопасно работать с launch
+
+Благодаря возможностям kotlin синтаксис приближен к синтаксису оператора try-catch
 
 ## Пример использования
 
@@ -9,6 +15,7 @@ launchIO {
     // Корутина будет запущена на Dispatchers.IO
     println("#1 launchIO runs, ${Thread.currentThread().name}")
     delay(400)
+    // Будет выброшена ошибка, которая будет отловлена в блоке catch
     error("#1 launchIO error, ${Thread.currentThread().name}")
 } catch {
     // Ошибки будут отлавливаться на Dispatchers.Main
@@ -16,7 +23,7 @@ launchIO {
 }
 ```
 
-### Более подробный пример
+## Более подробный пример
 
 ```kotlin
 launchIO {
@@ -49,4 +56,3 @@ launchIO {
     println("catch on(Dispatchers.Default) [$it], ${Thread.currentThread().name}")
 }
 ```
-

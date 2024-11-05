@@ -3,7 +3,7 @@ package su.vlasilya.trylaunch
 import kotlinx.coroutines.CoroutineDispatcher
 
 /**
- * Функция позволяет указать диспатчер для обработки корутины
+ * Функция позволяет указать диспатчер для обработки ошибок корутины
  *
  * @param dispatcher
  * @param onError обработчик ошибки
